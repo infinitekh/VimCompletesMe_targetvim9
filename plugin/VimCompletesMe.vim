@@ -4,7 +4,7 @@
 " Website:             <http://github.com/ackyshake/VimCompletesMe>
 
 " Vimscript Setup: {{{1
-if exists("g:loaded_VimCompletesMe") || v:version < 703 || &compatible
+if exists("g:loaded_VimCompletesMe") || v:version < 900 || &compatible
   finish
 endif
 let g:loaded_VimCompletesMe = 1
@@ -35,7 +35,7 @@ endif
 augroup VCM
   autocmd!
   autocmd InsertEnter * let b:completion_tried = 0
-  if v:version > 703 || v:version == 703 && has('patch598')
+  if v:version > 899 || v:version == 703 && has('patch598')
     autocmd CompleteDone * let b:completion_tried = 0
   endif
 augroup END
